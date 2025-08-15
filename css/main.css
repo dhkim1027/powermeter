@@ -1,23 +1,25 @@
 body {
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4;
-    color: #333;
+  /* font-family: 'Nanum Gothic', sans-serif; */
+  /* font-size: 16px; */
+  /* font-weight: 400; */
+  /* line-height: 1.4; */
+  /* color: #333; */
 }
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 img {
-    /* img(인라인 요소) 하단에 Baseline 공백을 제거 */
-    display: block;
+  /* img(인라인 요소) 하단에 Baseline 공백을 제거 */
+  display: block;
 }
 
 /*INNER*/
 .inner {
-    width: 1400px;
-    margin: 0 auto;
-    position: relative;
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
 }
 
 header {
@@ -25,36 +27,42 @@ header {
   position: fixed;
   top: 0;
   z-index: 9;
-	background: #363636 0% 0% no-repeat padding-box;
-	box-shadow: 0px 3px 6px #00000029;
-	opacity: 1;
+  background: #363636 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
 }
 header > .inner {
-    height: 90px;
-		background: royalblue;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 header .logo {
-    width: 264;
-    height: 26px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
 }
+
+header .title {
+  font: normal normal normal 20px/24px Open Sans;
+  letter-spacing: 0px;
+  color: #cecece;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 header .sub-menu {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    /* display: flex; */
 }
+
 header .sub-menu ul.menu {
-    display: flex;
+  display: flex;
 }
+
 header .sub-menu ul.menu li {
-    width: 24;
-    height: 24px;
-    /* position: relative; */
+  margin-left: 20px;
 }
