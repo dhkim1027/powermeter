@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_200" data-name="Rectangle 200" width="24" height="24" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="ic_Help" opacity="0.85">
+    <g id="Group_88" data-name="Group 88" clip-path="url(#clip-path)">
+      <path id="Path_115" data-name="Path 115" d="M12.722,5.066A4.13,4.13,0,0,0,8.089,7.739a1,1,0,0,0,1.884.672,2.129,2.129,0,0,1,4.082.247c.137.658-.228,1.1-1.094,1.932a10.815,10.815,0,0,0-.859.9A4.35,4.35,0,0,0,11,14.012l-.008.98A1,1,0,0,0,11.984,16h.008a1,1,0,0,0,1-.993l0-.907a2.335,2.335,0,0,1,.656-1.346,8.641,8.641,0,0,1,.7-.726c.86-.832,2.037-1.972,1.661-3.778a4.116,4.116,0,0,0-3.291-3.184" fill="#fff"/>
+      <path id="Path_116" data-name="Path 116" d="M11.951,17a1,1,0,1,0,1,1,1,1,0,0,0-1-1" fill="#fff"/>
+      <path id="Path_117" data-name="Path 117" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0m0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22" fill="#fff"/>
+    </g>
+  </g>
+</svg>
