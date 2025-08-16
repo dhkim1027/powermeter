@@ -40,9 +40,47 @@
       </div>
     </div>
   </header>
-  <section class="powermeter-chart"></section>
-  <section class="powermeter-table"></section>
+  <section class="sub-content">
+    <div class="inner">
+      <div class="filters">
+        <div class="date-filters">
+          <input type="text" placeholder="Minimum">
+          <input type="text" placeholder="Maximum">
+        </div>
+        <div class="band-filters">
+          <div class="toggle">
+            <span class="label">2.4G</span>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle">
+            <span class="label">5G</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle">
+            <span class="label">6G</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-content">
+    <div class="inner">
+      <div class="chart"></div>
+      <div class="table"></div>
+    </div>
+  </section>
 
+  <script src="js/main.js"></script>
 </body>
 
 </html>
