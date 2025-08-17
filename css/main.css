@@ -339,3 +339,8 @@ td:first-child img {
   cursor: pointer;
   color: #555;
 }
+
+#chart-container {
+  position: relative;
+  overflow: hidden;
+}

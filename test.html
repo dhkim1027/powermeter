@@ -2,92 +2,15 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Sensor Chart</title>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<meta charset="utf-8">
+	<title>Dynamic Data + Time Axis - Apache ECharts Demo</title>
+  <link rel="stylesheet" href="css/test.css" />
 </head>
 
 <body>
-	<h2>Sensor Data</h2>
-	<canvas id="sensorChart" width="800" height="400"></canvas>
-
-	<script>
-		let chart;
-		let lastTimestamp = null;
-
-		// 차트 초기화 함수
-		function initChart(labels, data) {
-			const ctx = document.getElementById('sensorChart').getContext('2d');
-			chart = new Chart(ctx, {
-				type: 'line',
-				data: {
-					labels: labels,
-					datasets: [{
-						label: 'Sensor Value',
-						data: data,
-						borderColor: 'blue',
-						backgroundColor: 'rgba(0, 0, 255, 0.1)',
-						fill: true
-					}]
-				},
-				options: {
-					responsive: true,
-					animation: false,
-					scales: {
-						x: {
-							title: { display: true, text: 'Time' }
-						},
-						y: {
-							title: { display: true, text: 'Value' }
-						}
-					}
-				}
-			});
-		}
-
-		// 차트에 데이터 추가
-		function addData(label, value) {
-			chart.data.labels.push(label);
-			chart.data.datasets[0].data.push(value);
-			chart.update();
-		}
-
-		// 서버에서 초기 데이터 불러오기
-		async function loadInitialData() {
-			try {
-				const res = await fetch('/api/data.json');
-				const json = await res.json();
-				const labels = json.map(item => item.time);
-				const values = json.map(item => item.value);
-				lastTimestamp = labels[labels.length - 1];
-				initChart(labels, values);
-			} catch (err) {
-				console.error('Initial data load failed', err);
-			}
-		}
-
-		// 주기적으로 새로운 데이터 가져오기
-		async function loadNewData() {
-			try {
-				const res = await fetch(`/api/sensor-data?after=${lastTimestamp}`);
-				const json = await res.json();
-				if (json.length > 0) {
-					json.forEach(item => {
-						addData(item.time, item.value);
-						lastTimestamp = item.time;
-					});
-				}
-			} catch (err) {
-				console.error('New data load failed', err);
-			}
-		}
-
-		// 초기 데이터 로드 후, 5초마다 새로운 데이터 갱신
-		loadInitialData().then(() => {
-			setInterval(loadNewData, 5000);
-		});
-	</script>
+	<div id="chart-container"></div>
+	<script src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
+	<script src="js/test.js"></script>
 </body>
 
 </html>
