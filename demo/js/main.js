@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const warningCell = document.createElement('td');
           if (item.Name === 'house' || item.Name === 'home' || item.Name === 'officeB') {
               const warningIcon = document.createElement('img');
-              warningIcon.src = 'images/ic_connceted_error_og.svg';
+              warningIcon.src = 'demo/images/ic_connceted_error_og.png';
               warningIcon.alt = 'Warning';
               warningCell.appendChild(warningIcon);
           }
@@ -110,6 +110,12 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   option = {
     title: {text: 'Dynamic Data & Time Axis'},
+    grid: {
+      left: '10px',
+      right: '10px',
+      bottom: '10px',
+      containLabel: {show: true}
+    },
     tooltip: {
       trigger: 'axis',
       formatter: function(params) {
